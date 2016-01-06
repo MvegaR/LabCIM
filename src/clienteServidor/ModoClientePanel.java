@@ -61,6 +61,7 @@ public class ModoClientePanel extends JPanel {
 	private JComboBox<Object> comboSourceID;
 	private JComboBox<Object> comboTarjetID;
 	private JButton btnEjecutar;
+	private RelojGuardian watchdog;
 	
 	
 	//private JTextField textField_1;
@@ -218,6 +219,16 @@ public class ModoClientePanel extends JPanel {
 		gbc_bitPorSegundo.gridx = 1;
 		gbc_bitPorSegundo.gridy = 3;
 		panelEstacion1.add(bitPorSegundo, gbc_bitPorSegundo);
+		
+		watchdog = new RelojGuardian();
+		GridBagConstraints gbc_watchdog = new GridBagConstraints();
+		gbc_watchdog.gridwidth = 2;
+		gbc_watchdog.gridheight = 3;
+		gbc_watchdog.insets = new Insets(0, 0, 5, 5);
+		gbc_watchdog.fill = GridBagConstraints.BOTH;
+		gbc_watchdog.gridx = 2;
+		gbc_watchdog.gridy = 4;
+		panelEstacion1.add(watchdog, gbc_watchdog);
 
 		JLabel label_2 = new JLabel("Bit de datos:");
 		label_2.setForeground(Color.BLACK);
@@ -721,6 +732,8 @@ public class ModoClientePanel extends JPanel {
 		
 		btnEjecutar.addActionListener(e->comandoRunPcplc(partID.getText(), sourceID.getText(), 
 				sourceIndex.getText(), targetID.getText(), targetIndex.getText(), speed.getText()));
+		
+
 		
 	}
 	

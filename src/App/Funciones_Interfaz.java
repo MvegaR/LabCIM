@@ -1,6 +1,6 @@
 package App;
 
-import Frames.Ventana_Servidor;
+import clienteServidor.ModoServidorPanel;
 
 import java.io.BufferedReader;
 import java.io.File;
