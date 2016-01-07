@@ -47,7 +47,7 @@ public class Distribucion_Laplace {
 	
 	public float Calculo(float b, float u, float x){
 		System.out.println("*Distribucion Laplace");
-		float exponente, resultado;
+		float exponente;// resultado;
 		if(ComprobarVariables(b, u, x)==true){			
 				exponente= (x - u);
 			if(exponente<0){

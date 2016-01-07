@@ -3,7 +3,7 @@ package App;
 
 import java.io.*;
 import java.net.*;
-import javax.swing.JFrame;
+
 
 /**
  *
@@ -21,7 +21,7 @@ public class Cliente {
      static  Socket sckCliente;
      static String mensajeRecibido = "";
  
-    public String  Cliente(String ip, String id){
+    public String cliente(String ip, String id){
         
         this.IP=ip;
         this.ID=id;

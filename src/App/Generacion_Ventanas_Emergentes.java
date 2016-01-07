@@ -663,7 +663,7 @@ public class Generacion_Ventanas_Emergentes {
 		return Variables;
 	}
 	public String[] NumeroNuevaArea1(){
-	int a=0;
+	//int a=0;
 	String[] ab = {" "," "};
 	ab=MensajeDosVariables("Ingrese el numero de la Nueva Area", "Ingrese el numero de maquinas", "int", "int");
 	System.out.println("NUmero nueva Area"+ab[0]);

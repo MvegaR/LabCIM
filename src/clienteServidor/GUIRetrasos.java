@@ -17,6 +17,9 @@ public class GUIRetrasos extends JFrame{
 
 	public GUIRetrasos(){
 		super("Ventana");
+		System.out.println(System.getProperty("os.name"));
+		System.out.println(System.getProperty("os.arch"));
+		System.out.println(System.getProperty("java.home"));
 		setResizable(false);
 		getContentPane().setBounds(new Rectangle(100, 200, 500, 600));
 		setTitle("Gestor y colector de retrasos");

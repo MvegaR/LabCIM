@@ -16,7 +16,7 @@ public class Servidor implements Runnable{
     static DataOutputStream salida; // respuesta que se le dara al cliente, en este caso segun el ws su dato probabilistico  
     String mensajeRecibido ="";
     static DataInputStream entrada;
-    public  void Servidor(String [] datos) throws IOException{  // aca puse el throws  por el sc.close(); en el catch
+    public  void servidor(String [] datos) throws IOException{  // aca puse el throws  por el sc.close(); en el catch
     // se guardara aca lo que recivamos del cliente
      this.valor=datos;
      Thread hilo = new Thread(this);

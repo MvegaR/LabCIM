@@ -18,8 +18,6 @@ import java.awt.Component;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 
@@ -30,18 +28,18 @@ public class ModoServidorPanel extends JPanel {
     private JTextField AreaTextR1;
     private JTextField AreaTextR2;
     private JTextField AreaTextFr;
-    private JTextField textField_2;
+   // private JTextField textField_2;
     private JTextField AreaTextR3;
     private JTextField AreaTextVs1;
     private JTextField AreaTextCv;
     private JTextField AreaTextTr;
-    private JComboBox jComboBoxR1;
-    private JComboBox jComboBoxR2;
-    private JComboBox jComboBoxFr;
-    private JComboBox jComboBoxTr;
-    private JComboBox jComboBoxR3;
-    private JComboBox jComboBoxV1;
-    private JComboBox jComboBoxCv;
+    private JComboBox<Object> jComboBoxR1;
+    private JComboBox<Object> jComboBoxR2;
+    private JComboBox<Object> jComboBoxFr;
+    private JComboBox<Object> jComboBoxTr;
+    private JComboBox<Object> jComboBoxR3;
+    private JComboBox<Object> jComboBoxV1;
+    private JComboBox<Object> jComboBoxCv;
 
     public String[] datos;
     public String[] dato;
@@ -53,17 +51,17 @@ public class ModoServidorPanel extends JPanel {
     public String vision;
     public String conveyor;
     public App.Servidor nuevo;
-    private JPanel jpanel;
-    private String Nombre;
-    private String Codigo;
-    private JComboBox calculoProb;
-    private JTextField Valor;
+   // private JPanel jpanel;
+  //  private String Nombre;
+   // private String Codigo;
+   // private JComboBox calculoProb;
+   // private JTextField Valor;
     private JRadioButton Acepted;
-    private boolean Aceptado;
-    private int NumArea;
+    //private boolean Aceptado;
+    //private int NumArea;
     ActionListener actionListener;
 
-    private float  ValorACEPTADO= 0;
+  //  private float  ValorACEPTADO= 0;
 
     public ModoServidorPanel(GUIRetrasos ventana) {
 	super();
@@ -102,10 +100,10 @@ public class ModoServidorPanel extends JPanel {
 	gbc_lblRobot1.gridy = 1;
 	panelEstacion1.add(lblRobot1, gbc_lblRobot1);
 
-	jComboBoxR1 = new JComboBox();
+	jComboBoxR1 = new JComboBox<Object>();
 	jComboBoxR1.setFont(new Font("Dialog", Font.PLAIN, 16));
 	jComboBoxR1.setMaximumRowCount(20);
-	jComboBoxR1.setModel(new DefaultComboBoxModel(new String[] {"Seleccione...", "1. Distribuci\u00F3n t de Students", "2. Distribuci\u00F3n Exponencial", "3. Distribuci\u00F3n Laplace", "4. Distribuci\u00F3n Normal Estandar", "5. Distribuci\u00F3n Poisson", "6. Distribuci\u00F3n Uniforme", "7. Distribuci\u00F3n Weibull", "8. Congruencia Lineal"}));
+	jComboBoxR1.setModel(new DefaultComboBoxModel<Object>(new String[] {"Seleccione...", "1. Distribuci\u00F3n t de Students", "2. Distribuci\u00F3n Exponencial", "3. Distribuci\u00F3n Laplace", "4. Distribuci\u00F3n Normal Estandar", "5. Distribuci\u00F3n Poisson", "6. Distribuci\u00F3n Uniforme", "7. Distribuci\u00F3n Weibull", "8. Congruencia Lineal"}));
 	GridBagConstraints gbc_jComboBoxR1 = new GridBagConstraints();
 	gbc_jComboBoxR1.insets = new Insets(0, 0, 5, 5);
 	gbc_jComboBoxR1.fill = GridBagConstraints.BOTH;
@@ -172,9 +170,9 @@ public class ModoServidorPanel extends JPanel {
 	gbc_lblRobot2.gridy = 1;
 	panelEstacion2.add(lblRobot2, gbc_lblRobot2);
 
-	jComboBoxR2 = new JComboBox();
+	jComboBoxR2 = new JComboBox<Object>();
 	jComboBoxR2.setFont(new Font("Dialog", Font.PLAIN, 16));
-	jComboBoxR2.setModel(new DefaultComboBoxModel(new String[] {"Seleccione...", "1. Distribuci\u00F3n t de Students", "2. Distribuci\u00F3n Exponencial", "3. Distribuci\u00F3n Laplace", "4. Distribuci\u00F3n Normal Estandar", "5. Distribuci\u00F3n Poisson", "6. Distribuci\u00F3n Uniforme", "7. Distribuci\u00F3n Weibull", "8. Congruencia Lineal"}));
+	jComboBoxR2.setModel(new DefaultComboBoxModel<Object>(new String[] {"Seleccione...", "1. Distribuci\u00F3n t de Students", "2. Distribuci\u00F3n Exponencial", "3. Distribuci\u00F3n Laplace", "4. Distribuci\u00F3n Normal Estandar", "5. Distribuci\u00F3n Poisson", "6. Distribuci\u00F3n Uniforme", "7. Distribuci\u00F3n Weibull", "8. Congruencia Lineal"}));
 	jComboBoxR2.setMaximumRowCount(20);
 	GridBagConstraints gbc_ComboBoxR2 = new GridBagConstraints();
 	gbc_ComboBoxR2.insets = new Insets(0, 0, 5, 5);
@@ -218,10 +216,10 @@ public class ModoServidorPanel extends JPanel {
 	gbc_lblRobot.gridy = 3;
 	panelEstacion2.add(lblRobot, gbc_lblRobot);
 
-	jComboBoxFr = new JComboBox();
+	jComboBoxFr = new JComboBox<Object>();
 	jComboBoxFr.setFont(new Font("Dialog", Font.PLAIN, 16));
 	jComboBoxFr.setMaximumRowCount(20);
-	jComboBoxFr.setModel(new DefaultComboBoxModel(new String[] {"Seleccione...", "1. Distribuci\u00F3n t de Students", "2. Distribuci\u00F3n Exponencial", "3. Distribuci\u00F3n Laplace", "4. Distribuci\u00F3n Normal Estandar", "5. Distribuci\u00F3n Poisson", "6. Distribuci\u00F3n Uniforme", "7. Distribuci\u00F3n Weibull", "8. Congruencia Lineal"}));
+	jComboBoxFr.setModel(new DefaultComboBoxModel<Object>(new String[] {"Seleccione...", "1. Distribuci\u00F3n t de Students", "2. Distribuci\u00F3n Exponencial", "3. Distribuci\u00F3n Laplace", "4. Distribuci\u00F3n Normal Estandar", "5. Distribuci\u00F3n Poisson", "6. Distribuci\u00F3n Uniforme", "7. Distribuci\u00F3n Weibull", "8. Congruencia Lineal"}));
 	GridBagConstraints gbc_jComboBoxFr = new GridBagConstraints();
 	gbc_jComboBoxFr.insets = new Insets(0, 0, 5, 5);
 	gbc_jComboBoxFr.fill = GridBagConstraints.BOTH;
@@ -264,10 +262,10 @@ public class ModoServidorPanel extends JPanel {
 	gbc_lblTorno.gridy = 5;
 	panelEstacion2.add(lblTorno, gbc_lblTorno);
 
-	jComboBoxTr = new JComboBox();
+	jComboBoxTr = new JComboBox<Object>();
 	jComboBoxTr.setFont(new Font("Dialog", Font.PLAIN, 16));
 	jComboBoxTr.setMaximumRowCount(20);
-	jComboBoxTr.setModel(new DefaultComboBoxModel(new String[] {"Seleccione...", "1. Distribuci\u00F3n t de Students", "2. Distribuci\u00F3n Exponencial", "3. Distribuci\u00F3n Laplace", "4. Distribuci\u00F3n Normal Estandar", "5. Distribuci\u00F3n Poisson", "6. Distribuci\u00F3n Uniforme", "7. Distribuci\u00F3n Weibull", "8. Congruencia Lineal"}));
+	jComboBoxTr.setModel(new DefaultComboBoxModel<Object>(new String[] {"Seleccione...", "1. Distribuci\u00F3n t de Students", "2. Distribuci\u00F3n Exponencial", "3. Distribuci\u00F3n Laplace", "4. Distribuci\u00F3n Normal Estandar", "5. Distribuci\u00F3n Poisson", "6. Distribuci\u00F3n Uniforme", "7. Distribuci\u00F3n Weibull", "8. Congruencia Lineal"}));
 	GridBagConstraints gbc_jComboBoxTr = new GridBagConstraints();
 	gbc_jComboBoxTr.insets = new Insets(0, 0, 5, 5);
 	gbc_jComboBoxTr.fill = GridBagConstraints.BOTH;
@@ -331,10 +329,10 @@ public class ModoServidorPanel extends JPanel {
 	gbc_lblRobot3.gridy = 2;
 	panelEstacion3.add(lblRobot3, gbc_lblRobot3);
 
-	jComboBoxR3 = new JComboBox();
+	jComboBoxR3 = new JComboBox<Object>();
 	jComboBoxR3.setFont(new Font("Dialog", Font.PLAIN, 16));
 	jComboBoxR3.setMaximumRowCount(20);
-	jComboBoxR3.setModel(new DefaultComboBoxModel(new String[] {"Seleccione...", "1. Distribuci\u00F3n t de Students", "2. Distribuci\u00F3n Exponencial", "3. Distribuci\u00F3n Laplace", "4. Distribuci\u00F3n Normal Estandar", "5. Distribuci\u00F3n Poisson", "6. Distribuci\u00F3n Uniforme", "7. Distribuci\u00F3n Weibull", "8. Congruencia Lineal"}));
+	jComboBoxR3.setModel(new DefaultComboBoxModel<Object>(new String[] {"Seleccione...", "1. Distribuci\u00F3n t de Students", "2. Distribuci\u00F3n Exponencial", "3. Distribuci\u00F3n Laplace", "4. Distribuci\u00F3n Normal Estandar", "5. Distribuci\u00F3n Poisson", "6. Distribuci\u00F3n Uniforme", "7. Distribuci\u00F3n Weibull", "8. Congruencia Lineal"}));
 	GridBagConstraints gbc_ComboBoxR3 = new GridBagConstraints();
 	gbc_ComboBoxR3.fill = GridBagConstraints.BOTH;
 	gbc_ComboBoxR3.insets = new Insets(0, 0, 5, 5);
@@ -376,10 +374,10 @@ public class ModoServidorPanel extends JPanel {
 	gbc_lblVisin.gridy = 4;
 	panelEstacion3.add(lblVisin, gbc_lblVisin);
 
-	jComboBoxV1 = new JComboBox();
+	jComboBoxV1 = new JComboBox<Object>();
 	jComboBoxV1.setFont(new Font("Dialog", Font.PLAIN, 16));
 	jComboBoxV1.setMaximumRowCount(20);
-	jComboBoxV1.setModel(new DefaultComboBoxModel(new String[] {"Seleccione...", "1. Distribuci\u00F3n t de Students", "2. Distribuci\u00F3n Exponencial", "3. Distribuci\u00F3n Laplace", "4. Distribuci\u00F3n Normal Estandar", "5. Distribuci\u00F3n Poisson", "6. Distribuci\u00F3n Uniforme", "7. Distribuci\u00F3n Weibull", "8. Congruencia Lineal"}));
+	jComboBoxV1.setModel(new DefaultComboBoxModel<Object>(new String[] {"Seleccione...", "1. Distribuci\u00F3n t de Students", "2. Distribuci\u00F3n Exponencial", "3. Distribuci\u00F3n Laplace", "4. Distribuci\u00F3n Normal Estandar", "5. Distribuci\u00F3n Poisson", "6. Distribuci\u00F3n Uniforme", "7. Distribuci\u00F3n Weibull", "8. Congruencia Lineal"}));
 	GridBagConstraints gbc_jComboBoxV1 = new GridBagConstraints();
 	gbc_jComboBoxV1.fill = GridBagConstraints.BOTH;
 	gbc_jComboBoxV1.insets = new Insets(0, 0, 5, 5);
@@ -442,10 +440,10 @@ public class ModoServidorPanel extends JPanel {
 	panelEstacion4.add(lblConveyor, gbc_lblConveyor);
 
 
-	jComboBoxCv = new JComboBox();
+	jComboBoxCv = new JComboBox<Object>();
 	jComboBoxCv.setFont(new Font("Dialog", Font.PLAIN, 16));
 	jComboBoxCv.setMaximumRowCount(20);
-	jComboBoxCv.setModel(new DefaultComboBoxModel(new String[] {"Seleccione...", "1. Distribuci\u00F3n t de Students", "2. Distribuci\u00F3n Exponencial", "3. Distribuci\u00F3n Laplace", "4. Distribuci\u00F3n Normal Estandar", "5. Distribuci\u00F3n Poisson", "6. Distribuci\u00F3n Uniforme", "7. Distribuci\u00F3n Weibull", "8. Congruencia Lineal"}));
+	jComboBoxCv.setModel(new DefaultComboBoxModel<Object>(new String[] {"Seleccione...", "1. Distribuci\u00F3n t de Students", "2. Distribuci\u00F3n Exponencial", "3. Distribuci\u00F3n Laplace", "4. Distribuci\u00F3n Normal Estandar", "5. Distribuci\u00F3n Poisson", "6. Distribuci\u00F3n Uniforme", "7. Distribuci\u00F3n Weibull", "8. Congruencia Lineal"}));
 	GridBagConstraints gbc_jComboBoxCv = new GridBagConstraints();
 	gbc_jComboBoxCv.fill = GridBagConstraints.BOTH;
 	gbc_jComboBoxCv.insets = new Insets(0, 0, 5, 5);
@@ -568,19 +566,18 @@ public class ModoServidorPanel extends JPanel {
     public GUIRetrasos getEnVentana() {
 	return enVentana;
     }
-    private void botonDetenerActionPerformed(java.awt.event.ActionEvent evt) {                                             
-	// TODO add your handling code here:
+   /* private void botonDetenerActionPerformed(java.awt.event.ActionEvent evt) {                                             
+	// todo add your handling code here:
 	// este es el boton de activacion del servidor
 	try {
 	    nuevo.stop();
 	} catch (IOException ex) {
 	    Logger.getLogger(ModoServidorPanel.class.getName()).log(Level.SEVERE, null, ex);
 	}
-    }
-
+    }*/
     private void BotonEstablecerActionPerformed(java.awt.event.ActionEvent evt) {                                                
-	// TODO add your handling code here:
-	System.out.println("hola");
+	// todo add your handling code here:
+	//System.out.println("hola");
 	robot1=AreaTextR1.getText();       
 	robot2=AreaTextR2.getText();      
 	robot3=AreaTextR3.getText();
@@ -604,7 +601,7 @@ public class ModoServidorPanel extends JPanel {
 	}else{       JOptionPane.showMessageDialog(this, "Recuerde Presionar el boton Cerrar conexion cuando realice algun cambio");
 	try {
 	    this.nuevo = new App.Servidor();   // este es el boton de activacion del servidor
-	    nuevo.Servidor(dato);
+	    nuevo.servidor(dato);
 
 	} catch (IOException ex) {
 	    System.out.println(ex.getMessage());
@@ -652,10 +649,10 @@ public class ModoServidorPanel extends JPanel {
 
 	int opcion=jComboBoxR1.getSelectedIndex();
 	App.Generacion_Ventanas_Emergentes GVE= new App.Generacion_Ventanas_Emergentes();
-	App.Funciones_Interfaz FI = new App.Funciones_Interfaz();
+	//App.Funciones_Interfaz FI = new App.Funciones_Interfaz();
 	float valor=0;
 
-	System.out.println("opcion: "+opcion);
+	//System.out.println("opcion: "+opcion);
 	if(opcion==0){//No se ha elegido ninguna opcion
 	    valor=-1;
 	}
@@ -697,10 +694,10 @@ public class ModoServidorPanel extends JPanel {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {                                         
 	int opcion=jComboBoxR2.getSelectedIndex();
 	App.Generacion_Ventanas_Emergentes GVE= new App.Generacion_Ventanas_Emergentes();
-	App.Funciones_Interfaz FI = new App.Funciones_Interfaz();
+	//App.Funciones_Interfaz FI = new App.Funciones_Interfaz();
 	float valor=0;
 
-	System.out.println("opcion: "+opcion);
+	//System.out.println("opcion: "+opcion);
 	if(opcion==0){//No se ha elegido ninguna opcion
 	    valor=-1;
 	}
@@ -742,10 +739,10 @@ public class ModoServidorPanel extends JPanel {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {                                         
 	int opcion=jComboBoxFr.getSelectedIndex();
 	App.Generacion_Ventanas_Emergentes GVE= new App.Generacion_Ventanas_Emergentes();
-	App.Funciones_Interfaz FI = new App.Funciones_Interfaz();
+	//App.Funciones_Interfaz FI = new App.Funciones_Interfaz();
 	float valor=0;
 
-	System.out.println("opcion: "+opcion);
+	//System.out.println("opcion: "+opcion);
 	if(opcion==0){//No se ha elegido ninguna opcion
 	    valor=-1;
 	}
@@ -787,10 +784,10 @@ public class ModoServidorPanel extends JPanel {
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {                                         
 	int opcion=jComboBoxTr.getSelectedIndex();
 	App.Generacion_Ventanas_Emergentes GVE= new App.Generacion_Ventanas_Emergentes();
-	App.Funciones_Interfaz FI = new App.Funciones_Interfaz();
+	//App.Funciones_Interfaz FI = new App.Funciones_Interfaz();
 	float valor=0;
 
-	System.out.println("opcion: "+opcion);
+	//System.out.println("opcion: "+opcion);
 	if(opcion==0){//No se ha elegido ninguna opcion
 	    valor=-1;
 	}
@@ -832,10 +829,10 @@ public class ModoServidorPanel extends JPanel {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {                                         
 	int opcion=jComboBoxR3.getSelectedIndex();
 	App.Generacion_Ventanas_Emergentes GVE= new App.Generacion_Ventanas_Emergentes();
-	App.Funciones_Interfaz FI = new App.Funciones_Interfaz();
+	//App.Funciones_Interfaz FI = new App.Funciones_Interfaz();
 	float valor=0;
 
-	System.out.println("opcion: "+opcion);
+	//System.out.println("opcion: "+opcion);
 	if(opcion==0){//No se ha elegido ninguna opcion
 	    valor=-1;
 	}
@@ -877,10 +874,10 @@ public class ModoServidorPanel extends JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
 	int opcion=jComboBoxV1.getSelectedIndex();
 	App.Generacion_Ventanas_Emergentes GVE= new App.Generacion_Ventanas_Emergentes();
-	App.Funciones_Interfaz FI = new App.Funciones_Interfaz();
+	//App.Funciones_Interfaz FI = new App.Funciones_Interfaz();
 	float valor=0;
 
-	System.out.println("opcion: "+opcion);
+	//System.out.println("opcion: "+opcion);
 	if(opcion==0){//No se ha elegido ninguna opcion
 	    valor=-1;
 	}
@@ -922,10 +919,10 @@ public class ModoServidorPanel extends JPanel {
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {                                         
 	int opcion=jComboBoxCv.getSelectedIndex();
 	App.Generacion_Ventanas_Emergentes GVE= new App.Generacion_Ventanas_Emergentes();
-	App.Funciones_Interfaz FI = new App.Funciones_Interfaz();
+	//App.Funciones_Interfaz FI = new App.Funciones_Interfaz();
 	float valor=0;
 
-	System.out.println("opcion: "+opcion);
+	//System.out.println("opcion: "+opcion);
 	if(opcion==0){//No se ha elegido ninguna opcion
 	    valor=-1;
 	}

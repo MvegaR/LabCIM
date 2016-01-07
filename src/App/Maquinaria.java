@@ -1,6 +1,5 @@
 package App;
 
-import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
@@ -13,20 +12,22 @@ import javax.swing.*;
  * 
  */
 public class Maquinaria extends JPanel implements ActionListener{
-	private JPanel jpanel;
-	private String Nombre;
+
+    private static final long serialVersionUID = 1L;
+	//private JPanel jpanel;
+	public String Nombre;
 	private String Codigo;
-	private JComboBox calculoProb;
+	private JComboBox<?> calculoProb;
 	private JTextField Valor;
 	private JRadioButton Acepted;
 	private boolean Aceptado;
 	private int NumArea;
 	ActionListener actionListener;
 	private int opcion;
-	private float  ValorACEPTADO= 0;
+	//private float  ValorACEPTADO= 0;
 	
 	Maquinaria(){
-		ValorACEPTADO=-1;
+		//ValorACEPTADO=-1;
 
 	}
 	
@@ -68,7 +69,7 @@ public class Maquinaria extends JPanel implements ActionListener{
 		this.NumArea= NumArea;
 	}
 	
-	public JComboBox ComboBoxProb(){
+	public JComboBox<?> ComboBoxProb(){
 		final String lista[] = {"Calculo Probabilidad",
 				"Distribucion T de Student"  			//1
 				,"Distribucion Exponencial" 			//2
@@ -80,7 +81,7 @@ public class Maquinaria extends JPanel implements ActionListener{
 				,"Congruencia Lineal"					//8
 				,"Ingresar Datos"						//9
 				};
-		final JComboBox comboBox = new JComboBox(lista);
+		final JComboBox<String> comboBox = new JComboBox<String>(lista);
 		comboBox.setMaximumRowCount(4);
 		comboBox.setEditable(false);
 		return(comboBox);
@@ -89,24 +90,24 @@ public class Maquinaria extends JPanel implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Generacion_Ventanas_Emergentes GVE= new Generacion_Ventanas_Emergentes();
-		Funciones_Interfaz FI = new Funciones_Interfaz();
+		//Funciones_Interfaz FI = new Funciones_Interfaz();
 		float valor=0;
 		if(e.getSource()== Acepted & opcion!=0){
 			if(Aceptado==false){
 				Aceptado=true;
 				calculoProb.setEnabled(false);
 				String aceptado= Valor.getText();
-				ValorACEPTADO= Float.valueOf(aceptado);
+				//ValorACEPTADO= Float.valueOf(aceptado);
 				String NumerArea= Integer.toString(NumArea);
-				FI.GeneraRegistro(true,NumerArea,Codigo,aceptado);
+				Funciones_Interfaz.GeneraRegistro(true,NumerArea,Codigo,aceptado);
 				
 			} else{
 				Aceptado=false;
 				calculoProb.setEnabled(true);
-				ValorACEPTADO= -1;
+				//ValorACEPTADO= -1;
 				String aceptado= Valor.getText();
 				String NumerArea= Integer.toString(NumArea);
-				FI.GeneraRegistro(false,NumerArea,Codigo,aceptado);
+				Funciones_Interfaz.GeneraRegistro(false,NumerArea,Codigo,aceptado);
 			}
 		}
 		

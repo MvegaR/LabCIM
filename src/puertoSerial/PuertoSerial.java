@@ -55,9 +55,11 @@ public class PuertoSerial
 
 
 	public void connect ( String portName ) throws Exception{
+	    
+	    	
 		
 		if(!portName.equals("")){
-
+		    
 			CommPortIdentifier portIdentifier = CommPortIdentifier.getPortIdentifier(portName);
 			if ( portIdentifier.isCurrentlyOwned() )
 			{
@@ -172,7 +174,15 @@ public class PuertoSerial
 
 	}
 
-
+	public static void copiarBiblioteca(){
+	    if(System.getProperty("io.name").toString().contains("Windows")){
+		
+	    }else if(System.getProperty("io.name").toString().contains("Linux")){
+		
+	    }else if(System.getProperty("io.name").toString().contains("Mac")){
+		
+	    }
+	}
 
 
 

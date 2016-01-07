@@ -42,7 +42,7 @@ public class Distribucion_T_Student {
 	System.out.println("*Distribucion T de Stundent");	
 	 if(Validar(n,t)==true){
 		 float Resultado1;
-			double partPrin, parA;
+			double parA; //partPrin,
 				//convalidaci�n
 			if(t<0){
 				parA=integral((double) t,(double)0, 500);

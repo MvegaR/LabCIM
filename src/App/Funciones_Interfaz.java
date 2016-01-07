@@ -1,21 +1,18 @@
 package App;
 
-import clienteServidor.ModoServidorPanel;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.LinkedList;
 
-import javax.swing.JTabbedPane;
 
 public class Funciones_Interfaz {
-	private int numeroAreas;
-	private int numeroMaquinarias;
+	//private int numeroAreas;
+	//private int numeroMaquinarias;
 	BufferedReader br = null;
 	Generacion_Ventanas_Emergentes Ventanas= new Generacion_Ventanas_Emergentes();
 	//AreasTrabajos AreaTRAB;
@@ -101,7 +98,7 @@ public class Funciones_Interfaz {
 	  					if(Area==true | Maq==true | dataFirst ==true){
 	  							 numero= Integer.valueOf(sCurrentLine);
 	  							 if(dataFirst==true){ //primera lectura: cantidad de Areas existentes
-	  								numeroAreas= numero;
+	  								//numeroAreas= numero;
 	  								dataFirst=false;
 	  								AreasTrabajo.println(sCurrentLine);
 	  						//	 System.out.println("\tFAREA por aqui ya pase : "+ sCurrentLine);
@@ -230,7 +227,7 @@ public class Funciones_Interfaz {
 	  					if(Area==true | Maq==true | dataFirst ==true){
 	  							 numero= Integer.valueOf(sCurrentLine);
 	  							 if(dataFirst==true){ //primera lectura: cantidad de Areas existentes
-	  								numeroAreas= numero;
+	  								//numeroAreas= numero;
 	  								dataFirst=false;
 	  								AreasTrabajo.println(sCurrentLine);
 	  						//	 System.out.println("\tFAREA por aqui ya pase : "+ sCurrentLine);
@@ -354,7 +351,7 @@ public class Funciones_Interfaz {
 				if(Area==true | Maq==true | dataFirst ==true){
 						 numero= Integer.valueOf(sCurrentLine);
 						 if(dataFirst==true){ //primera lectura: cantidad de Areas existentes
-							numeroAreas= numero;
+							//numeroAreas= numero;
 							dataFirst=false;
 							AreasTrabajo.println(sCurrentLine);
 					//	 System.out.println("\tFAREA por aqui ya pase : "+ sCurrentLine);
@@ -410,7 +407,7 @@ public class Funciones_Interfaz {
 	   		 Integer area1,  area2=0;
 	   		 int numero=0;
 	   		 boolean Num=true;
-	   		 boolean NuevaArea=false;
+	   		 //boolean NuevaArea=false;
 	   		 sCurrentLine= br.readLine();
 	   		 area1= Integer.valueOf(sCurrentLine);
 	   		 PrintWriter AreasTrabajo = new PrintWriter("WS"+area1+".txt", "UTF-8");
@@ -426,7 +423,7 @@ public class Funciones_Interfaz {
 		   			 //System.out.println("\t Cambio de area");
 		   			 area2=area1;
 		   			AreasTrabajo.close();
-		   			NuevaArea=true;
+		   			//NuevaArea=true;
 		      		AreasTrabajo= new PrintWriter("WS"+area1+".txt", "UTF-8");
 		   		 }
 		   		 AreasTrabajo.println(sCurrentLine);
@@ -453,7 +450,7 @@ public class Funciones_Interfaz {
 			CantidadA= Integer.valueOf(sCurrentLine);
 			for(int i=1; i<=CantidadA;i++ ){
 				sCurrentLine=br.readLine();
-				int AreaActual= Integer.valueOf(sCurrentLine);
+				//int AreaActual= Integer.valueOf(sCurrentLine);
 				//Area_De_Trabajo a = new Area_De_Trabajo("WS"+AreaActual+".txt", AreaActual);
 			}
 			
@@ -467,7 +464,7 @@ public class Funciones_Interfaz {
 	   		 Integer area1,  area2=0;
 	   		 int numero=0;
 	   		 boolean Num=true;
-	   		 boolean NuevaArea=false;
+	   		 //boolean NuevaArea=false;
 	   		 sCurrentLine= br.readLine();
 	   		 area1= Integer.valueOf(sCurrentLine);
 	   		 PrintWriter AreasTrabajo = new PrintWriter("WS"+area1+".txt", "UTF-8");
@@ -483,7 +480,7 @@ public class Funciones_Interfaz {
 		   			 //System.out.println("\t Cambio de area");
 		   			 area2=area1;
 		   			AreasTrabajo.close();
-		   			NuevaArea=true;
+		   			//NuevaArea=true;
 		      		AreasTrabajo= new PrintWriter("WS"+area1+".txt", "UTF-8");
 		   		 }
 		   		 AreasTrabajo.println(sCurrentLine);
@@ -521,12 +518,14 @@ public class Funciones_Interfaz {
 			}
 			if(nombreArea.size()==NumAreas){ //No existe area;
 				System.out.println("Error: No existe Area");
+				numero.close();
 				return false;
 			}else{
 				NumAreas--;
 				System.out.println("Numero de Areas"+ NumAreas);
 				if(NumAreas==0){
 					System.out.println("No existen areas");
+					numero.close();
 					return false;
 				}
 				PrintWriter Nuevo = new PrintWriter("WS.txt", "UTF-8");
@@ -625,12 +624,13 @@ public class Funciones_Interfaz {
 			}
 			if(nombreArea.size()==NumAreas){ //No existe area;
 				System.out.println("Error: No existe Area");
+				numero.close();
 				return 0;
 			}else{
 				NumAreas--;
 				System.out.println("Numero de Areas"+ NumAreas);
 				if(NumAreas==0){
-					
+				    	numero.close();
 					return 2;
 				}
 				PrintWriter Nuevo = new PrintWriter("WS.txt", "UTF-8");
@@ -1290,6 +1290,7 @@ public class Funciones_Interfaz {
         			System.out.println(i+" : "+Almacena.get(i));
         		}
         		RegisED.close();
+        		leer.close();
 			}	
 		} catch (IOException e) {
 	        System.out.println("File not found");
@@ -1325,6 +1326,7 @@ public class Funciones_Interfaz {
 				posicion++;
 			}
 			Salida.print("$");
+			leer.close();
 			Salida.close();
 		}catch(IOException e){
 			System.out.println("File not found");
@@ -1412,6 +1414,7 @@ public class Funciones_Interfaz {
 			RSalida.close();
 			File elimino= new File("R_Salida.txt");
 			elimino.deleteOnExit();
+			leer.close();
 		}catch(IOException e){
 			System.out.println("File not found");
 		}
@@ -1429,7 +1432,7 @@ public class Funciones_Interfaz {
 	}
 	
 /** Funciones para Construir la interfaz**/
-	public LinkedList InicioListaConstructor(){
+	public LinkedList<String> InicioListaConstructor(){
 		 String sCurrentLine, AreaTrab;
 		 LinkedList<String> lista= new LinkedList<String>();
 		 boolean flag=true;
@@ -1620,6 +1623,7 @@ public class Funciones_Interfaz {
 			}
 			
 			RSalida.println("$");
+			leer.close();
 			RSalida.close();
 			
 		}catch(IOException e){

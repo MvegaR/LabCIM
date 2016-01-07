@@ -1,6 +1,5 @@
 package App;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.util.LinkedList;
 import javax.swing.BorderFactory;
