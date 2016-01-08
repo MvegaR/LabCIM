@@ -50,7 +50,7 @@ public class ModoServidorPanel extends JPanel {
     public String torno;
     public String vision;
     public String conveyor;
-    public App.Servidor nuevo;
+    public app.Servidor nuevo;
    // private JPanel jpanel;
   //  private String Nombre;
    // private String Codigo;
@@ -600,7 +600,7 @@ public class ModoServidorPanel extends JPanel {
 	    JOptionPane.showMessageDialog(this, "No pueden haber campos vacios");
 	}else{       JOptionPane.showMessageDialog(this, "Recuerde Presionar el boton Cerrar conexion cuando realice algun cambio");
 	try {
-	    this.nuevo = new App.Servidor();   // este es el boton de activacion del servidor
+	    this.nuevo = new app.Servidor();   // este es el boton de activacion del servidor
 	    nuevo.servidor(dato);
 
 	} catch (IOException ex) {
@@ -648,7 +648,7 @@ public class ModoServidorPanel extends JPanel {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {                                         
 
 	int opcion=jComboBoxR1.getSelectedIndex();
-	App.Generacion_Ventanas_Emergentes GVE= new App.Generacion_Ventanas_Emergentes();
+	app.Generacion_Ventanas_Emergentes GVE= new app.Generacion_Ventanas_Emergentes();
 	//App.Funciones_Interfaz FI = new App.Funciones_Interfaz();
 	float valor=0;
 
@@ -693,7 +693,7 @@ public class ModoServidorPanel extends JPanel {
     }                       
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {                                         
 	int opcion=jComboBoxR2.getSelectedIndex();
-	App.Generacion_Ventanas_Emergentes GVE= new App.Generacion_Ventanas_Emergentes();
+	app.Generacion_Ventanas_Emergentes GVE= new app.Generacion_Ventanas_Emergentes();
 	//App.Funciones_Interfaz FI = new App.Funciones_Interfaz();
 	float valor=0;
 
@@ -738,7 +738,7 @@ public class ModoServidorPanel extends JPanel {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {                                         
 	int opcion=jComboBoxFr.getSelectedIndex();
-	App.Generacion_Ventanas_Emergentes GVE= new App.Generacion_Ventanas_Emergentes();
+	app.Generacion_Ventanas_Emergentes GVE= new app.Generacion_Ventanas_Emergentes();
 	//App.Funciones_Interfaz FI = new App.Funciones_Interfaz();
 	float valor=0;
 
@@ -783,7 +783,7 @@ public class ModoServidorPanel extends JPanel {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {                                         
 	int opcion=jComboBoxTr.getSelectedIndex();
-	App.Generacion_Ventanas_Emergentes GVE= new App.Generacion_Ventanas_Emergentes();
+	app.Generacion_Ventanas_Emergentes GVE= new app.Generacion_Ventanas_Emergentes();
 	//App.Funciones_Interfaz FI = new App.Funciones_Interfaz();
 	float valor=0;
 
@@ -828,7 +828,7 @@ public class ModoServidorPanel extends JPanel {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {                                         
 	int opcion=jComboBoxR3.getSelectedIndex();
-	App.Generacion_Ventanas_Emergentes GVE= new App.Generacion_Ventanas_Emergentes();
+	app.Generacion_Ventanas_Emergentes GVE= new app.Generacion_Ventanas_Emergentes();
 	//App.Funciones_Interfaz FI = new App.Funciones_Interfaz();
 	float valor=0;
 
@@ -873,7 +873,7 @@ public class ModoServidorPanel extends JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
 	int opcion=jComboBoxV1.getSelectedIndex();
-	App.Generacion_Ventanas_Emergentes GVE= new App.Generacion_Ventanas_Emergentes();
+	app.Generacion_Ventanas_Emergentes GVE= new app.Generacion_Ventanas_Emergentes();
 	//App.Funciones_Interfaz FI = new App.Funciones_Interfaz();
 	float valor=0;
 
@@ -918,7 +918,7 @@ public class ModoServidorPanel extends JPanel {
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {                                         
 	int opcion=jComboBoxCv.getSelectedIndex();
-	App.Generacion_Ventanas_Emergentes GVE= new App.Generacion_Ventanas_Emergentes();
+	app.Generacion_Ventanas_Emergentes GVE= new app.Generacion_Ventanas_Emergentes();
 	//App.Funciones_Interfaz FI = new App.Funciones_Interfaz();
 	float valor=0;
 

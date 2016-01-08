@@ -1,5 +1,4 @@
-
-package App;
+package app;
 
 import java.io.*;
 import java.net.*;

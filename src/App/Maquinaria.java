@@ -1,4 +1,4 @@
-package App;
+package app;
 
 import java.awt.event.*;
 import javax.swing.*;

@@ -1,4 +1,4 @@
-package App;
+package app;
 
 public class Ingreso_Usuario {
 	protected float Valor;

@@ -1,4 +1,4 @@
-package gui;
+package terminalPuertoSerialGUI;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -53,7 +53,6 @@ public class Ventana extends JFrame {
 	private JTextField entradaComando;
 	private JTextField simboloMayor;
 	private JButton btnEnviar;
-
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {

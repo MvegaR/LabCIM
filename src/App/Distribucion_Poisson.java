@@ -1,4 +1,4 @@
-package App;
+package app;
 
 public class Distribucion_Poisson {
 	public static final double E = 2.7182818284590452354;

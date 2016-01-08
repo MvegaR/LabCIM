@@ -14,7 +14,7 @@ import javax.swing.JTextArea;
  */
 
 public class TextAreaLectura extends InputStream implements KeyListener {
-
+//No se uso...
 	private JTextArea tf;
 	private String str = null;
 	private int pos = 0;

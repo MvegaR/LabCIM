@@ -1,4 +1,4 @@
-package App;
+package app;
 
 import java.awt.Color;
 import java.util.LinkedList;

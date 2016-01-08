@@ -1,4 +1,4 @@
-package App;
+package app;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;

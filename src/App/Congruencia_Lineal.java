@@ -1,4 +1,4 @@
-package App;
+package app;
 
 public class Congruencia_Lineal {
 	public static final double E = 2.7182818284590452354;
